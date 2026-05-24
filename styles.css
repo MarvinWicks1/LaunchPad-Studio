@@ -10,8 +10,8 @@ html {
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #fff7ed;
-  color: #24160f;
+  background: #f5f1e8;
+  color: #1f2a1f;
   line-height: 1.6;
 }
 
@@ -28,10 +28,10 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  border: 1px solid rgba(36, 22, 15, 0.12);
+  border: 1px solid rgba(31, 42, 31, 0.12);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
 }
 
 .brand {
@@ -49,12 +49,12 @@ nav {
 nav a {
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
-  color: #6f4c35;
+  color: #526252;
 }
 
 nav a:hover {
-  background: #ffe3ca;
-  color: #24160f;
+  background: #e2ead7;
+  color: #1f2a1f;
 }
 
 main {
@@ -74,11 +74,11 @@ main {
 .eyebrow {
   width: fit-content;
   margin-bottom: 1rem;
-  border: 1px solid rgba(209, 94, 44, 0.22);
+  border: 1px solid rgba(75, 111, 68, 0.22);
   border-radius: 999px;
   padding: 0.35rem 0.65rem;
-  background: #ffe3ca;
-  color: #9a3f1d;
+  background: #e2ead7;
+  color: #31522f;
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.14em;
@@ -89,22 +89,22 @@ h1,
 h2 {
   max-width: 960px;
   line-height: 0.98;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.06em;
 }
 
 h1 {
-  font-size: clamp(3.8rem, 9vw, 8.6rem);
+  font-size: clamp(3.5rem, 9vw, 8rem);
 }
 
 h2 {
-  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+  font-size: clamp(2.35rem, 5.5vw, 4.5rem);
 }
 
 .intro {
   max-width: 720px;
   margin: 1.5rem 0 2rem;
   font-size: clamp(1.1rem, 2vw, 1.35rem);
-  color: #6f4c35;
+  color: #526252;
 }
 
 .actions {
@@ -119,17 +119,17 @@ h2 {
   align-items: center;
   min-height: 3.15rem;
   padding: 0.8rem 1.2rem;
-  border: 1px solid #24160f;
+  border: 1px solid #31522f;
   border-radius: 999px;
   font-weight: 900;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .button.primary {
-  background: #ef6a32;
-  border-color: #ef6a32;
-  color: #fff7ed;
-  box-shadow: 0 14px 30px rgba(239, 106, 50, 0.25);
+  background: #31522f;
+  border-color: #31522f;
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(49, 82, 47, 0.22);
 }
 
 .button.secondary {
@@ -137,224 +137,148 @@ h2 {
 }
 
 .button:hover,
-.price-card:hover,
 .card:hover {
   transform: translateY(-4px);
 }
 
-.hero-panel {
-  border: 1px solid rgba(36, 22, 15, 0.14);
-  border-radius: 2rem;
-  background: linear-gradient(145deg, #ffffff, #ffe3ca);
-  padding: 2rem;
-  box-shadow: 0 30px 80px rgba(95, 52, 26, 0.14);
+.hero-card,
+.card,
+.area-panel,
+blockquote,
+details {
+  border: 1px solid rgba(31, 42, 31, 0.12);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 1.5rem;
+  box-shadow: 0 18px 50px rgba(31, 42, 31, 0.08);
 }
 
-.hero-panel p {
+.hero-card {
+  padding: 2rem;
+  background: linear-gradient(145deg, #ffffff, #e2ead7);
+}
+
+.hero-card p {
   margin-bottom: 1rem;
-  color: #9a3f1d;
+  color: #31522f;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.75rem;
 }
 
-.hero-panel strong {
+.hero-card strong {
   display: block;
   margin-bottom: 1rem;
-  color: #ef6a32;
-  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: #31522f;
+  font-size: clamp(3rem, 8vw, 5.2rem);
   line-height: 0.9;
   letter-spacing: -0.08em;
 }
 
-.hero-panel span {
-  color: #6f4c35;
+.hero-card span,
+.trust-strip span,
+.card p,
+.area-panel li,
+.split p,
+details p {
+  color: #526252;
 }
 
-.stats {
+.trust-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
-.stats article {
-  border: 1px solid rgba(36, 22, 15, 0.12);
-  border-radius: 1.5rem;
+.trust-strip article {
+  border-radius: 1.25rem;
   padding: 1.5rem;
-  background: #fff;
-  box-shadow: 0 18px 50px rgba(95, 52, 26, 0.08);
+  background: #31522f;
+  color: #fff;
 }
 
-.stats strong {
+.trust-strip strong {
   display: block;
-  color: #ef6a32;
-  font-size: 2.5rem;
-  line-height: 1;
-  letter-spacing: -0.06em;
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
 }
 
-.stats span,
-.price-card li,
-.card p,
-.problem-list p,
-.case-study p,
-details p {
-  color: #6f4c35;
+.trust-strip span {
+  color: #dcebd5;
 }
 
 .section {
   padding: 6rem 0;
 }
 
-.problem,
-.case-study {
-  display: grid;
-  grid-template-columns: 1fr 0.9fr;
-  gap: 3rem;
-}
-
-.problem-list {
-  display: grid;
-  gap: 1rem;
-}
-
-.problem-list article {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  padding: 1.25rem;
-  border: 1px solid rgba(36, 22, 15, 0.12);
-  border-radius: 1.25rem;
-  background: #fff;
-}
-
-.problem-list span {
-  color: #ef6a32;
-  font-weight: 900;
+.section-heading {
+  margin-bottom: 2rem;
 }
 
 .cards,
-.pricing-grid,
 .quote-grid {
   display: grid;
   gap: 1rem;
-  margin-top: 2rem;
 }
 
-.cards,
-.pricing-grid {
+.cards {
   grid-template-columns: repeat(3, 1fr);
 }
 
 .quote-grid {
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
 }
 
-.card,
-.price-card,
-blockquote,
-details {
-  border: 1px solid rgba(36, 22, 15, 0.12);
-  border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.78);
-  padding: 1.5rem;
-  box-shadow: 0 18px 50px rgba(95, 52, 26, 0.08);
-}
-
-.card,
-.price-card {
+.card {
   min-height: 220px;
   transition: transform 180ms ease;
 }
 
+.card.featured {
+  background: #31522f;
+  color: #fff;
+}
+
+.card.featured p {
+  color: #dcebd5;
+}
+
 .card h3,
-.price-card h3 {
+.area-panel h3 {
   margin-bottom: 1rem;
   font-size: 1.35rem;
 }
 
-.case-study {
-  align-items: center;
+.split {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 3rem;
+  align-items: start;
 }
 
-.case-study p {
-  max-width: 620px;
+.split p {
   margin-top: 1rem;
+  max-width: 620px;
   font-size: 1.05rem;
 }
 
-.mock-window {
-  border-radius: 2rem;
-  background: #24160f;
-  padding: 1rem;
-  box-shadow: 0 30px 80px rgba(95, 52, 26, 0.18);
-}
-
-.mock-top {
-  height: 2rem;
-  margin-bottom: 1rem;
-  border-radius: 999px;
-  background: #ffe3ca;
-}
-
-.mock-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.mock-grid span {
-  min-height: 120px;
-  border-radius: 1.25rem;
-  background: linear-gradient(145deg, #fff7ed, #ffd2ad);
-}
-
-.plan {
-  display: inline-block;
-  margin-bottom: 1rem;
-  border-radius: 999px;
-  padding: 0.35rem 0.65rem;
-  background: #ffe3ca;
-  color: #9a3f1d;
-  font-size: 0.72rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.price-card strong {
-  display: block;
-  margin: 1rem 0;
-  font-size: 2.25rem;
-  letter-spacing: -0.06em;
-}
-
-.price-card ul {
+.area-panel ul {
   display: grid;
   gap: 0.75rem;
   padding-left: 1.1rem;
 }
 
-.price-card.featured {
-  background: #24160f;
-  color: #fff7ed;
-  transform: translateY(-0.75rem);
-}
-
-.price-card.featured li {
-  color: #ffd2ad;
-}
-
 blockquote {
-  font-size: 1.35rem;
-  line-height: 1.35;
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 cite {
   display: block;
   margin-top: 1rem;
-  color: #6f4c35;
+  color: #526252;
   font-size: 1rem;
   font-style: normal;
 }
@@ -380,27 +304,27 @@ details p {
   margin-bottom: 2rem;
   border-radius: 2rem;
   padding: 4rem;
-  background: linear-gradient(135deg, #24160f, #9a3f1d);
-  color: #fff7ed;
-  box-shadow: 0 30px 80px rgba(95, 52, 26, 0.18);
+  background: linear-gradient(135deg, #1f2a1f, #31522f);
+  color: #fff;
+  box-shadow: 0 30px 80px rgba(31, 42, 31, 0.18);
 }
 
 .cta p {
   max-width: 700px;
   margin: 1rem 0 2rem;
-  color: #ffd2ad;
+  color: #dcebd5;
 }
 
 .cta .eyebrow {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.2);
-  color: #ffd2ad;
+  color: #dcebd5;
 }
 
 .cta .button.primary {
-  background: #fff7ed;
-  border-color: #fff7ed;
-  color: #24160f;
+  background: #fff;
+  border-color: #fff;
+  color: #1f2a1f;
 }
 
 @media (max-width: 900px) {
@@ -413,11 +337,9 @@ details p {
   }
 
   .hero,
-  .problem,
-  .case-study,
-  .stats,
+  .trust-strip,
   .cards,
-  .pricing-grid,
+  .split,
   .quote-grid {
     grid-template-columns: 1fr;
   }
@@ -429,10 +351,6 @@ details p {
 
   .section {
     padding: 4rem 0;
-  }
-
-  .price-card.featured {
-    transform: none;
   }
 
   .cta {
