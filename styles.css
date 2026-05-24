@@ -39,6 +39,13 @@ a {
   letter-spacing: -0.05em;
 }
 
+.brand::after {
+  content: "  / Wakefield rounds";
+  color: #6f7f5f;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -154,8 +161,21 @@ details {
 }
 
 .hero-card {
+  position: relative;
   padding: 2rem;
   background: linear-gradient(145deg, #ffffff, #e2ead7);
+  overflow: hidden;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  right: -3rem;
+  bottom: -3rem;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 999px;
+  background: rgba(49, 82, 47, 0.12);
 }
 
 .hero-card p {
@@ -181,13 +201,14 @@ details {
 .card p,
 .area-panel li,
 .split p,
-details p {
+details p,
+.season-list span {
   color: #526252;
 }
 
 .trust-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1.1fr 0.9fr 1fr;
   gap: 1rem;
 }
 
@@ -196,6 +217,10 @@ details p {
   padding: 1.5rem;
   background: #31522f;
   color: #fff;
+}
+
+.trust-strip article:nth-child(2) {
+  background: #6f7f5f;
 }
 
 .trust-strip strong {
@@ -208,7 +233,8 @@ details p {
   color: #dcebd5;
 }
 
-.section {
+.section,
+.season-board {
   padding: 6rem 0;
 }
 
@@ -217,13 +243,18 @@ details p {
 }
 
 .cards,
-.quote-grid {
+.quote-grid,
+.season-list {
   display: grid;
   gap: 1rem;
 }
 
 .cards {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 0.95fr 1.1fr 0.95fr;
+}
+
+.staggered-cards .card:nth-child(2) {
+  transform: translateY(1.5rem);
 }
 
 .quote-grid {
@@ -232,13 +263,31 @@ details p {
 }
 
 .card {
-  min-height: 220px;
+  min-height: 230px;
   transition: transform 180ms ease;
+}
+
+.card-tag {
+  display: inline-block;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  background: #e2ead7;
+  color: #31522f;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .card.featured {
   background: #31522f;
   color: #fff;
+}
+
+.card.featured .card-tag {
+  background: rgba(255, 255, 255, 0.14);
+  color: #dcebd5;
 }
 
 .card.featured p {
@@ -249,6 +298,32 @@ details p {
 .area-panel h3 {
   margin-bottom: 1rem;
   font-size: 1.35rem;
+}
+
+.season-board {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2rem;
+  align-items: start;
+  border-top: 1px solid rgba(31, 42, 31, 0.12);
+  border-bottom: 1px solid rgba(31, 42, 31, 0.12);
+}
+
+.season-list article {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(31, 42, 31, 0.12);
+}
+
+.season-list article:first-child {
+  padding-top: 0;
+}
+
+.season-list strong {
+  color: #31522f;
 }
 
 .split {
@@ -268,6 +343,10 @@ details p {
   display: grid;
   gap: 0.75rem;
   padding-left: 1.1rem;
+}
+
+.route-card {
+  transform: rotate(1deg);
 }
 
 blockquote {
@@ -328,6 +407,10 @@ details p {
 }
 
 @media (max-width: 900px) {
+  .brand::after {
+    display: none;
+  }
+
   .site-header,
   nav,
   .actions {
@@ -340,8 +423,15 @@ details p {
   .trust-strip,
   .cards,
   .split,
-  .quote-grid {
+  .quote-grid,
+  .season-board,
+  .season-list article {
     grid-template-columns: 1fr;
+  }
+
+  .staggered-cards .card:nth-child(2),
+  .route-card {
+    transform: none;
   }
 
   .hero {
@@ -349,7 +439,8 @@ details p {
     padding: 4rem 0;
   }
 
-  .section {
+  .section,
+  .season-board {
     padding: 4rem 0;
   }
 
